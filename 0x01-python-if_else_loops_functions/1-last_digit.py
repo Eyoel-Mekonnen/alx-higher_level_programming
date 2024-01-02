@@ -6,7 +6,7 @@ if (tmp < 0):
     tmp = tmp * -1
 if (number < 0):
     print(f"Last digit of {number} is -{tmp % 10} and is "
-        f"less than 6 and not 0")
+          f"less than 6 and not 0")
 elif (tmp % 10 > 5):
     print(f"Last digit of {number} is {tmp % 10} and is greater than 5")
 elif (tmp % 10 == 0):
