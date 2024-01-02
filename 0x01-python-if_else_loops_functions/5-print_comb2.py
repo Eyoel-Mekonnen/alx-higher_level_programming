@@ -4,4 +4,3 @@ for i in range(100):
         print("{}".format(i))
         break
     print("{:02}, ".format(i), end='')
-
