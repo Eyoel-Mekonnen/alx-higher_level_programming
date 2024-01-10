@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
-    sort_value = []
-    if a_dictionary is None:
+    if not a_dictionary:
         return None
+    sort_value = []
     for key in a_dictionary:
         sort_value.append(a_dictionary[key])
     sort_value.sort()
