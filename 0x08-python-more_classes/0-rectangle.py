@@ -2,5 +2,5 @@
 """ Class Rectange"""
 
 
-def Rectangle:
+class Rectangle:
     pass
