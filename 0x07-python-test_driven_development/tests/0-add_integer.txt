@@ -30,6 +30,12 @@ TypeError: b must be an integer
 Traceback (most recent call last):
 ...
 OverflowError: cannot convert float infinity to integer
+
+>>> add_integer(2, float('inf'))
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+
 #Scenario where a NaN is passed i.e Not a Number is passed
 >>> add_integer(float('nan'))
 Traceback (most recent call last):
