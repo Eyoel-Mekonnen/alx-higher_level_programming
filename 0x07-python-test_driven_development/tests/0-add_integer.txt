@@ -45,3 +45,8 @@ ValueError: cannot convert float NaN to integer
 Traceback (most recent call last):
 ...
 ValueError: cannot convert float NaN to integer
+#if one or two arguments are missing
+>>> add_integer(7)
+Traceback (most recent call last):
+...
+TypeError: add_integer() missing 1 required positional argument: 'a'
