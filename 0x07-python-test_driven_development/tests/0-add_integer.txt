@@ -25,4 +25,17 @@ Traceback (most recent call last):
     ...
 TypeError: b must be an integer
 
-#Test with None as a, should raise TypeError
+#Testing float overflow
+>>> add_integer(float('inf'))
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+#Scenario where a NaN is passed i.e Not a Number is passed
+>>> add_integer(float('nan'))
+Traceback (most recent call last):
+...
+ValueError: cannot convert float Nan to integer
+>>> add_integer(5, float('nan'))
+Traceback (most recent call last):
+...
+ValueError: cannot convert float Nan to integer
