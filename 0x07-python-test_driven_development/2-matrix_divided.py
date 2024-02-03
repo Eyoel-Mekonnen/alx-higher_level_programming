@@ -22,11 +22,11 @@ def matrix_divided(matrix, div):
 
     length = len(matrix[0])
     if not (isinstance(matrix, list)):
-        raise TypeError("matrix must be a matrix (list of lists) of"
+        raise TypeError("matrix must be a matrix (list of lists) of "
                         "integers/floats")
     for i in matrix:
         if not (isinstance(i, list)):
-            raise TypeError("matrix must be a matrix (list of lists) of"
+            raise TypeError("matrix must be a matrix (list of lists) of "
                             "integers/floats")
         if len(i) != length:
             raise TypeError("Each row of the matrix must have the same size")
