@@ -67,7 +67,7 @@ If the rows are not all consistent
 ...     [1, 2, 3],
 ...     [4, 5, 6]
 ... ]
->>> print(matrix_divided(matrix, -3)
+>>> print(matrix_divided(matrix, -3))
 Traceback (most recent call last):
     ...
 TypeError: div must be a number
@@ -78,7 +78,7 @@ If Divisior is a non number
 ...     [1, 2, 3],
 ...     [4, 5, 6]
 ... ]
->>> print(matrix_divided(matrix, "hello")
+>>> print(matrix_divided(matrix, "hello"))
 Traceback (most recent call last):
     ...
 TypeError: div must be a number
@@ -98,7 +98,7 @@ If divisior is Zero
 ...     [1, 2, 3],
 ...     [4, 5, 6]
 ... ]
->>> print(matrix_divided(matrix, 0)
+>>> print(matrix_divided(matrix, 0))
 Traceback (most recent call last):
     ...
 ZeroDivisionError: division by zero
