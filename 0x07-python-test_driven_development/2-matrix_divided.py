@@ -30,10 +30,10 @@ def matrix_divided(matrix, div):
                             "integers/floats")
         if len(i) != length:
             raise TypeError("Each row of the matrix must have the same size")
-    for member in i:
-        if not (isinstance(member, (int, float))):
-            raise TypeError("matrix must be a matrix (list of lists) of "
-                            "integers/floats")
+        for member in i:
+            if not (isinstance(member, (int, float))):
+                raise TypeError("matrix must be a matrix (list of lists) of "
+                                "integers/floats")
     if not (isinstance(div, (float, int))):
         raise TypeError("div must be a number")
     if (div == 0):
