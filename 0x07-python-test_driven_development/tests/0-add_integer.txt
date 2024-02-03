@@ -48,8 +48,12 @@ Traceback (most recent call last):
     ...
 ValueError: cannot convert float NaN to integer
 
-#if one argument is missing
+#if two argument is missing
 >>> add_integer()
 Traceback (most recent call last):
     ...
 TypeError: add_integer() missing 1 required positional argument: 'a'
+
+#if one argument is missing
+>>> add_integer(5)
+103
