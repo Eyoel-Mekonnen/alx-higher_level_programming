@@ -16,6 +16,10 @@ def text_indentation(text):
                 print("")
                 print("")
             else:
+                if (text[i]) == " "):
+                    continue
                 print("{}".format(text[i]), end="")
+        elif (text[i] == " "):
+            continue
         else:
             print("{}".format(text[i]), end="")
