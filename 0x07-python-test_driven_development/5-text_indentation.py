@@ -17,5 +17,5 @@ def text_indentation(text):
                 print("")
             else:
                 print("{}".format(text[i]), end="")
-        elif (i < len(text) - 1):
+        else:
             print("{}".format(text[i]), end="")
