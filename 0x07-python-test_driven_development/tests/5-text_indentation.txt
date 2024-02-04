@@ -41,10 +41,12 @@ Quae animi affectio suum cuique tribuens atque hanc, quam dico.
 <BLANKLINE>
 Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
 
->>> text_indentation("Line 1\\n\\nLine 3")
+>>> text_indentation("\nLine 1\n\nLine 3")
+<BLANKLINE>
 Line 1
 <BLANKLINE>
-Line3
+Line 3
+
 ===============================================================================================
 Invalid outputs
 ===============================================================================================
@@ -61,4 +63,3 @@ TypeError: text_indentation() missing 1 required positional argument: 'text'
 Traceback (most recent call last):
     ...
 TypeError: text must be a string
->>> text_indentation
