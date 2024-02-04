@@ -18,7 +18,8 @@ def text_indentation(text):
             print("{}".format(text[i]), end="")
             print("\n")
             if (i + 1 < len(text)):
-                while ((text[i + 1] == '\t' or text[i+1] == ' ' or text[i] == '\n')):
+                while ((text[i + 1] == '\t' or text[i+1] == ' '
+                        or text[i] == '\n')):
                     if (i + 1 < len(text)):
                         i = i + 1
         i = i + 1
