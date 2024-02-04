@@ -47,6 +47,13 @@ Line 1
 <BLANKLINE>
 Line 3
 
+>>> text_indentation("Let's print a new-line! Here goes:\nPrinted.")
+Let's print a new-line! Here goes:
+<BLANKLINE>
+<BLANKLINE>
+Printed.
+<BLANKLINE>
+
 ===============================================================================================
 Invalid outputs
 ===============================================================================================
