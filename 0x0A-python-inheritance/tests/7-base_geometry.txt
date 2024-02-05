@@ -17,4 +17,8 @@ Traceback (most recent call last):
     ...
 TypeError: integer_validator() missing 1 required positional argument: 'value'
 
-
+>>> bg_2 = BaseGeometry()
+>>> bg_2.integer_validator("My_int", 10.05)
+Traceback (most recent call last):
+    ...
+TypeError: My_int must be an integer
