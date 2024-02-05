@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
@@ -43,11 +44,11 @@ class TestMaxInteger(unittest.TestCase):
     def test_string(self):
         """To check on string"""
         list_t7 = "Eyoel"
-        self.assertEqual(max_integer(list_7), 'y')
+        self.assertEqual(max_integer(list_t7), 'y')
 
     def test_empty(self):
         """To check on emtpy list"""
         self.assertEqual(max_integer(""), None)
 
-if __name__ = '__main__':
+if __name__ == '__main__':
     unittest.main()
