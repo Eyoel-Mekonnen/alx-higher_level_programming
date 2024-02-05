@@ -3,7 +3,7 @@
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
-def Rectangle(BaseGeometry):
+class Rectangle(BaseGeometry):
     """instantiaiton will happen"""
 
     def __init__(self, width, height):
