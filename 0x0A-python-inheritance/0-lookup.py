@@ -4,5 +4,4 @@
 
 def lookup(obj):
     """method will use dic() to list the attributes and methods"""
-
     return (dir(obj))
