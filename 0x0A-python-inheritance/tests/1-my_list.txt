@@ -1,0 +1,53 @@
+#Doc Test
+===================
+>>> MyList = __import__('1-my_list').MyList
+
+checking of MyList inherits from list
+>>> issubclass(MyList, list)
+True
+
+Empty list
+>>> list_1 = MyList()
+>>> list_1.print_sorted()
+[]
+
+Testing if appending is working
+
+>>> list_1.append(1)
+>>> list_1.append(2)
+>>> list_1.append(3)
+>>> print(list_1)
+[1, 2, 3]
+
+checking if they are in correct order
+
+>>> list_1.print_sorted()
+[1, 2, 3]
+
+checking on reversed list
+>>> list_1 = MyList()
+>>> list_1.append(3)
+>>> list_1.append(2)
+>>> list_1.append(1)
+>>> print(list_1)
+[3, 2, 1]
+
+>>> list_1.print_sorted()
+[1, 2, 3]
+
+checking for negative numbers
+
+>>> list_2 = MyList()
+>>> list_2.append(-10)
+>>> list_2.append(-1)
+>>> list_2.append(-4)
+>>> print(list_2)
+[-10, -1, -4]
+>>> list_2.print_sorted()
+[-10, -4, -1]
+
+checking what happens if I pass an argument to method that does not take an argument
+>>> list_2.print_sorted(1)
+Traceback (most recent call last):
+    ...
+TypeError: print_sorted() takes 1 positional argument but 2 were given
