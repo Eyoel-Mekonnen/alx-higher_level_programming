@@ -31,6 +31,10 @@ checking on reversed list
 >>> list_1.append(1)
 >>> print(list_1)
 [3, 2, 1]
+>>> 1ist_1.print_sorted()
+[1, 2, 3]
+>>> print(list_1)
+[3, 2, 1]
 
 >>> list_1.print_sorted()
 [1, 2, 3]
