@@ -31,7 +31,7 @@ class Rectangle(Base):
             raise TypeError("width must be an integer")
         if (value <= 0):
             raise ValueError("width must be > 0")
-        self.__width = width
+        self.__width = value
 
     @property
     def height(self):
@@ -45,7 +45,7 @@ class Rectangle(Base):
             raise TypeError("height must be an integer")
         if (value <= 0):
             raise ValueError("height must be > 0")
-        self.__height = height
+        self.__height = value
 
     @property
     def x(self):
@@ -57,7 +57,7 @@ class Rectangle(Base):
         """sets the value of self.__x but after checking its value."""
         if (x < 0):
             raise ValueError("x must be >= 0")
-        self.__x = x
+        self.__x = value
 
     @property
     def y(self):
@@ -69,4 +69,4 @@ class Rectangle(Base):
         """sets the value of self.__y but after checking its value."""
         if (y < 0):
             raise ValueError("y must b >= 0")
-        self.__y = y
+        self.__y = value
