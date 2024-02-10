@@ -92,6 +92,11 @@ class Rectangle(Base):
         """will update assign each argument to each attribute."""
         if args and len(args) != 0:
             for arg in range(1, len(args)):
+                if (arg == 0):
+                    if arg is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = args[0]
                 if (arg == 1):
                     self.width = args[1]
                 elif (arg == 2):
