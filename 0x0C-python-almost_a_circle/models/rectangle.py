@@ -78,15 +78,43 @@ class Rectangle(Base):
     def display(self):
         """displays the rectangle"""
         if (self.__width == 0 or self.__height == 0):
-            return("")
+            return ("")
         for w in range(0, self.__y):
             print("")
         for i in range(0, self.__height):
-            for z in range (0, self.__x):
+            for z in range(0, self.__x):
                 print(" ", end="")
             for j in range(0, self.__width):
                 print("#", end="")
             print("")
+
+    def update(self, *args, **kwargs):
+        """will update assign each argument to each attribute."""
+        if args and len(args) != 0:
+            for arg in range(1, len(args)):
+                if (arg == 1):
+                    self.width = args[1]
+                elif (arg == 2):
+                    self.height = args[2]
+                elif (arg == 3):
+                    self.x = args[3]
+                elif (arg == 4):
+                    self.y = args[4]
+        else:
+            for key, value in kwargs.items():
+                if (key == "id"):
+                    if (value is None):
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = value
+                elif (key == "width"):
+                    self.width = value
+                elif (key == "height"):
+                    self.height = value
+                elif (key == "x"):
+                    self.x = value
+                elif (key == "y"):
+                    self.y = value
 
     def __str__(self):
         """Returns descritpion of the instance of the class"""
