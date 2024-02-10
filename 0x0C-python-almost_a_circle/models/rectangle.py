@@ -82,6 +82,8 @@ class Rectangle(Base):
                 print("#", end="")
             print("")
 
-    def __str__(cls):
+    def __str__(self):
         """Returns descritpion of the instance of the class"""
-        return ("[Rectangle] (self.id) self.__x/self.__y - self.__width/self.__height")
+        return ("[Rectangle] " + "(" + str(self.id) + ")"
+                " " + str(self.__x) + "/" + str(self.__y) + " - "
+                + str(self.__width) + "/" + str(self.__height))
