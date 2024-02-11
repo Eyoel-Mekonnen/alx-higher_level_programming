@@ -48,10 +48,10 @@ class Square(Rectangle):
                     self.x = value
                 elif (key == "y"):
                     self.y = value
-    
+
     def to_dictionary(self):
         """instance of rectangle represented as a dict."""
-        return {'x': self.x, 'y': self.y, 'id': self.id, 'height', self.height, 'width': width}
+        return {'x': self.x, 'y': self.y, 'id': self.id, 'size', self.size}
 
     def __str__(self):
         """Returning the object representation of rectangle"""
