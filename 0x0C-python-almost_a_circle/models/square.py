@@ -17,8 +17,8 @@ class Square(Rectangle):
     @size.setter
     def size(self, value):
         """sets the size of square by using its Parent class."""
-        self.height = value
         self.width = value
+        self.height = value
 
     def __str__(self):
         """Returning the object representation of rectangle"""
