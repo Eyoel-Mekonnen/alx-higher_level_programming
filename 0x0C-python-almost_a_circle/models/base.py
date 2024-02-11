@@ -45,3 +45,13 @@ class Base:
             return (list_)
         else:
             json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """create a dictionary"""
+        if 'size' in dictionary:
+            dummy_instance = Square(1)
+        elif 'width' in dictionary and 'height' in dictionary:
+            dummy_instance = Rectangle(1, 1)
+        dummy_instance.update(**dictionary)
+        return (dummy_instance)   
