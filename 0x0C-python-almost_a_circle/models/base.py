@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """ Class Base about to be created"""
+import json
 
 
 class Base:
