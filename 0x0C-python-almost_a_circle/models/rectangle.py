@@ -55,6 +55,8 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """sets the value of self.__x but after checking its value."""
+        if not (isinstance(value, int)):
+            rasie TypeError("x must be an integer")
         if (value < 0):
             raise ValueError("x must be >= 0")
         self.__x = value
@@ -67,6 +69,8 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """sets the value of self.__y but after checking its value."""
+        if not (isinstance(value, int)):
+            raise TypeError("y must be an integer")
         if (value < 0):
             raise ValueError("y must be >= 0")
         self.__y = value
