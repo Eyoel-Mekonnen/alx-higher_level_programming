@@ -44,7 +44,7 @@ class Base:
             list_ = []
             return (list_)
         else:
-            json.loads(json_string)
+            return (json.loads(json_string))
 
     @classmethod
     def create(cls, **dictionary):
