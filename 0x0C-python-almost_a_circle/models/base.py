@@ -54,4 +54,18 @@ class Base:
         elif 'width' in dictionary and 'height' in dictionary:
             dummy_instance = cls(1, 1)
         dummy_instance.update(**dictionary)
-        return (dummy_instance)   
+        return (dummy_instance)
+
+    @classmethod
+    def load_from_file(cls):
+        """Loads from file."""
+        file_name = cls.__name__ + ".json"
+        try:
+            with open(file_name, "r", encoding="utf-8") as f:
+                json_file = Base.from_json_string(f.read())
+                list_of_instances = []
+                for instance in json_file:
+                    list_of_instances.append(cls.create(**instance))
+                return list_of_instances
+        except FileNotFoundError:
+            return ([])
