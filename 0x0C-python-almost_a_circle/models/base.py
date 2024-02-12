@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Class Base about to be created"""
 import json
+import csv
 
 
 class Base:
@@ -69,3 +70,17 @@ class Base:
                 return list_of_instances
         except FileNotFoundError:
             return ([])
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """save to csv file."""
+        csv_file = cls.__name__ + ".csv"
+        if (cls.__name__ == "Rectangle"):
+            fieldnames = ['id', 'width', 'height', 'x', 'y']
+        else:
+            fieldnames = ['id', 'size', 'x', 'y']
+        with open(csv_file, "w", newline="") as f:
+            encoder = csv.DictWriter(f, fieldnames=fieldnames)
+        for lists in list_objs:
+            encoder.writerow(lists)
+
