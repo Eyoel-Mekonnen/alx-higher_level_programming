@@ -82,4 +82,22 @@ class Base:
         with open(csv_file, "w", newline="") as f:
             encoder = csv.DictWriter(f, fieldnames=fieldnames)
         for lists in list_objs:
-            encoder.writerow(lists)
+            encoder.writerow(lists.to_dictionary())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Loads a file from csv"""
+        csv_file = cls.__name__ + ".csv"
+        if (cls.__name__ == "Rectangle"):
+            fieldnames = ['id', 'width', 'height', 'x', 'y']
+        else:
+            fieldnames = ['id', 'size', 'x', 'y']
+        try:
+            with open(csv_file, "r", newline="") as f:
+                reader = csv.DictReader(f, fieldnames=fieldnames)
+                list_of_instances = []
+                for objs in reader:
+                    list_of_instances.append(cls.create(**objs))
+                return list_of_instances
+        except FileNotFoundError:
+            return ([])
