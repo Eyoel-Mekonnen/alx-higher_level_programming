@@ -81,8 +81,8 @@ class Base:
             fieldnames = ['id', 'size', 'x', 'y']
         with open(csv_file, "w", newline="") as f:
             encoder = csv.DictWriter(f, fieldnames=fieldnames)
-        for lists in list_objs:
-            encoder.writerow(lists.to_dictionary())
+            for lists in list_objs:
+                encoder.writerow(lists.to_dictionary())
 
     @classmethod
     def load_from_file_csv(cls):
@@ -97,6 +97,8 @@ class Base:
                 reader = csv.DictReader(f, fieldnames=fieldnames)
                 list_of_instances = []
                 for objs in reader:
+                    for key in objs:
+                        objs[key] = int(objs[key])
                     list_of_instances.append(cls.create(**objs))
                 return list_of_instances
         except FileNotFoundError:
