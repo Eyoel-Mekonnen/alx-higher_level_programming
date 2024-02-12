@@ -83,4 +83,3 @@ class Base:
             encoder = csv.DictWriter(f, fieldnames=fieldnames)
         for lists in list_objs:
             encoder.writerow(lists)
-
