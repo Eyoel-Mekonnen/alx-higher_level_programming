@@ -23,6 +23,16 @@ class Test_Base(unittest.TestCase):
         self.assertEqual(id4, id3)
     
     def test_base_id(self):
+        """Checks if specified id is assigned correctly."""
         base1 = Base(89)
         self.assertEqual(base1.id, 89)
 
+    def test_to_json_string(self):
+        """checks if the json_to_string handles none or empty string"""
+        base = Base()
+        self.assertEqual(base.to_json_string(None), "[]")
+
+    def test_to_json_string_empty_list(self):
+        base = Base()
+        self.assertEqual("[]", base.to_json_string([]))
+        self.assertEqual(base.to_json_string([ { 'id': 12 }]), '[{"id": 12}]')
