@@ -62,9 +62,6 @@ class Test_Rectangle(unittest.TestCase):
         with self.assertRaises(TypeError, msg="width must be an integer"):
             Rectangle("1", 2, 3, 4, 5)
         with self.assertRaises(TypeError, msg="height must be an integer"):
-            Rectangle(1, "2", 3, 4, 5)
-
-    def test_str_rectangle(self):
-        
+            Rectangle(1, "2", 3, 4, 5) 
 
 
