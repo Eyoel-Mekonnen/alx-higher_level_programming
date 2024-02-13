@@ -38,4 +38,33 @@ class Test_Rectangle(unittest.TestCase):
         self.assertEqual(3, rectangle.x)
         self.assertEqual(4, rectangle.y)
         self.assertEqual(5, rectangle.id)
+        with self.assertRaises(ValueError, msg="width must be > 0"):
+            Rectangle(-1, 2)
+        with self.assertRaises(ValueError, msg="height must be > 0"):
+            Rectangle(1, -2)
+        with self.assertRaises(ValueError, msg="width must be > 0"):
+            Rectangle(0, 2)
+        with self.assertRaises(ValueError, msg="height must be > 0"):
+            Rectangle(1, 0)
+        with self.assertRaises(ValueError, msg="x must be >= 0"):
+            Rectangle(1, 2, -3)
+        with self.assertRaises(ValueError, msg="y must be >= 0"):
+            Rectangle(1, 2, 3, -4)
+
+    def test_area_rectangle(self):
+        """Test the area of rectangel."""
+        rectangle = Rectangle(1, 2, 3, 4, 5)
+        self.assertEqual(2, rectangle.area())
+        with self.assertRaises(ValueError, msg="width must be > 0"):
+            Rectangle(-1, 2, 3, 4, 5)
+        with self.assertRaises(ValueError, msg="height must be > 0"):
+            Rectangle(1, -2, 3, 4, 5)
+        with self.assertRaises(TypeError, msg="width must be an integer"):
+            Rectangle("1", 2, 3, 4, 5)
+        with self.assertRaises(TypeError, msg="height must be an integer"):
+            Rectangle(1, "2", 3, 4, 5)
+
+    def test_str_rectangle(self):
+        
+
 
