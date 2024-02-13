@@ -10,3 +10,5 @@ class Test_Rectangle(unittest.TestCase):
     def test_is_instance_of_parent(self):
         rectangle = Rectangle(10, 2)
         self.assertIsInstance(rectangle, Base)
+        self.assertEqual(10, rectangle.width)
+        self.assertEqual(2, rectangle.height)
