@@ -9,6 +9,7 @@ from models.square import Square
 class Test_Base(unittest.TestCase):
     """Unittiest testing for base class."""
     def test_instantiation(self):
+        """Test the instantiattion of Base ID"""
         base1 = Base()
         base2 = Base()
         id1 = base1.id
@@ -20,3 +21,8 @@ class Test_Base(unittest.TestCase):
         id3 = base3.id
         id4 = base4.id
         self.assertEqual(id4, id3)
+    
+    def test_base_id(self):
+        base1 = Base(89)
+        self.assertEqual(base1.id, 89)
+
