@@ -64,4 +64,7 @@ class Test_Rectangle(unittest.TestCase):
         with self.assertRaises(TypeError, msg="height must be an integer"):
             Rectangle(1, "2", 3, 4, 5) 
 
-
+    def test_str_rectangle(self):
+        """Testing str of rectangle."""
+        rectangle = Rectangle(4, 6, 2, 1, 12)
+        self.assertEqual("[Rectangle] (12) 2/1 - 4/6", str(rectangle))
