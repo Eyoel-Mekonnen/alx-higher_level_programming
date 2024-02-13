@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 """Testing the Rectangel class."""
 import unittest
+from unittest.mock import patch
 from models.base import Base
 from models.rectangle import Rectangle
+from io import StringIO
 
 
 class Test_Rectangle(unittest.TestCase):
@@ -68,3 +70,10 @@ class Test_Rectangle(unittest.TestCase):
         """Testing str of rectangle."""
         rectangle = Rectangle(4, 6, 2, 1, 12)
         self.assertEqual("[Rectangle] (12) 2/1 - 4/6", str(rectangle))
+
+    @patch('sys.stdout', new_callable=StringIO)
+    def test_display_rectangle(self, mock_stdout):
+        """Tests whether the display of rectangle works"""
+        rectangle = Rectangle(2, 3, 0, 0)
+        rectangle.display()
+        self.assertEqual("##\n##\n##\n", mock_stdout.getvalue())
