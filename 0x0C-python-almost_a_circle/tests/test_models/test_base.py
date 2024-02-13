@@ -33,7 +33,20 @@ class Test_Base(unittest.TestCase):
         self.assertEqual(base.to_json_string(None), "[]")
 
     def test_to_json_string_empty_list(self):
+        """Checks if to_json_string handles empty list and type."""
         base = Base()
         self.assertEqual("[]", base.to_json_string([]))
         self.assertEqual(base.to_json_string([ { 'id': 12 }]), '[{"id": 12}]')
-        self.assertEqual(type(base.to_json_string([ { 'id': 12 }])), str)
+        self.assertEqual(str, type(base.to_json_string([ { 'id': 12 }])))
+
+    def test_from_json_string_none(self):
+        """checks if empty is handled."""
+        base = Base(4)
+        self.assertEqual([], base.from_json_string(None))
+        self.assertEqual([], base.from_json_string(None))
+
+    def test_from_json_string_with_value(self):
+        """Checks how the valued are displayed."""
+        base = Base(6)
+        self.assertEqual([{"id": 89}], base.from_json_string('[{ "id": 89 }]'))
+        self.assertEqual(list, type(base.from_json_string('[{ "id": 89 }]')))
