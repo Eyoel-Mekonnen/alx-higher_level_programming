@@ -77,3 +77,17 @@ class Test_Rectangle(unittest.TestCase):
         rectangle = Rectangle(2, 3, 0, 0)
         rectangle.display()
         self.assertEqual("##\n##\n##\n", mock_stdout.getvalue())
+    
+    @patch('sys.stdout', new_callable=StringIO)
+    def test_display_rectangle_with_x(self, mock_stdout):
+        """Tests wether the display of rectangle works with x axis."""
+        rectangle = Rectangle(2, 3, 2, 0)
+        rectangle.display()
+        self.assertEqual("  ##\n  ##\n  ##\n", mock_stdout.getvalue())
+
+    @patch('sys.stdout', new_callable=StringIO)
+    def test_display_rectangle_with_bothxy(self, mock_stdout):
+        """Tests wether the display of rectangle works with x and y axis."""
+        rectangle = Rectangle(2, 3, 2, 2, 0)
+        rectangle.display()
+        self.assertEqual("\n\n  ##\n  ##\n  ##\n", mock_stdout.getvalue())
