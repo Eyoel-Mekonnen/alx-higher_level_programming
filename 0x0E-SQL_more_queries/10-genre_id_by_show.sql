@@ -1,6 +1,3 @@
--- Use the database
-USE hbtn_0d_tvshows;
-
 -- select and join the two tables
 SELECT tv_shows.title, tv_show_genres.genre_id
 FROM tv_shows
