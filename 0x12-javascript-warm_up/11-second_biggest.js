@@ -14,6 +14,6 @@ for (let i = 2; i < argv.length; i++) {
   }
 }
 if (array.length !== 0) {
-  array.sort();
-  console.log(array[array.length - 2]);
+  array.sort((a, b) => a - b);
+  console.log(array[(array.length) - 2]);
 }
