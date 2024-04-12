@@ -13,7 +13,7 @@ class Square extends Square_custom {
       for (let i = 0; i < this.size; i++) {
         let array = '';
         for (let j = 0; j < this.size; j++) {
-          array = array + 'C';
+          array = array + c;
 	}
 	console.log(array);
       }
