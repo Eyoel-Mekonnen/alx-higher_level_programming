@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+
+
 """ Creation of method to query MYSQL"""
 import MySQLdb
 import sys
