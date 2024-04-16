@@ -1,16 +1,17 @@
 #!/usr/bin/python3
 """
-This module provides a utility to connect to MySQL database and retrieve
+This module provides a utility to connect to MySQL database and retrieve.
+
 all entries from the 'states' table, sorting them by
-their 'id' in ascending order
+their 'id' in ascending order.
 """
+
 import MySQLdb
 import sys
 
 
 def select(username, password_, db_name):
-    """function that takes arguments of DB username,psd and db"""
-
+    """Take arguments of DB username,psd and db."""
     db = MySQLdb.connect(host="localhost", user=username,
                          password=password_, database=db_name)
     cursor = db.cursor()
