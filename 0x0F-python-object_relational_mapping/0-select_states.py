@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-
-
 """
 This module provides a utility to connect to MySQL database and retrieve
 all entries from the 'states' table, sorting them by
