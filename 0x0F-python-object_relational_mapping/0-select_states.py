@@ -15,8 +15,8 @@ def select(username, password_, db_name):
     db = MySQLdb.connect(host="localhost", user=username,
                          password=password_, database=db_name)
     cursor = db.cursor()
-    cursor.execute("SELECT states.id, states.name
-                   FROM states ORDER BY states.id ASC")
+    cursor.execute("""SELECT states.id, states.name
+                   FROM states ORDER BY states.id ASC""")
     results = cursor.fetchall()
     for rows in results:
         print(rows)
