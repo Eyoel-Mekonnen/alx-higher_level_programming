@@ -1,7 +1,11 @@
 #!/usr/bin/python3
 
 
-""" Creation of method to query MYSQL"""
+"""
+This module provides a utility to connect to MySQL database and retrieve
+all entries from the 'states' table, sorting them by
+their 'id' in ascending order
+"""
 import MySQLdb
 import sys
 
