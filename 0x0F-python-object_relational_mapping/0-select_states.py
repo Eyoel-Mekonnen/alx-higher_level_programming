@@ -11,7 +11,7 @@ import sys
 
 
 def select(username, password_, db_name):
-    """function that takes arguments of DB"""
+    """function that takes arguments of DB username,psd and db"""
     db = MySQLdb.connect(host="localhost", user=username,
                          password=password_, database=db_name)
     cursor = db.cursor()
