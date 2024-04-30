@@ -4,8 +4,8 @@ Python script that takes URL,send reuest display body.
 Handles HTTP Error
 """
 if __name__ == '__main__':
-    import urlib.request
-    import urlib.error
+    import urllib.request
+    import urllib.error
     import sys
     req = sys.argv[1]
     try:
