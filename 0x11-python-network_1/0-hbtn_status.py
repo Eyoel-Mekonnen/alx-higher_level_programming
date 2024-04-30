@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """script that fetches website"""
 
-if __name__ = '__main__':
+if __name__ == '__main__':
     import urllib import request
 
     with urllib.request.urlopen("https://alx-intranet.hbtn.io/status") as response:
