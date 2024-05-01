@@ -11,12 +11,12 @@ if __name__ == '__main__':
     data = {'q': q}
     response = requests.post("http://0.0.0.0:5000/search_user", data=data)
     json_ = response.json()
-    if json_ == {}:
-        print("No result")
     try:
+        if json_ == {}:
+            print("No result")
         for key, value in json_.items():
             if key == "id":
-                print("[{}] ".format(json_[key], end=""))
+                print("[{}] ".format(json_[key]), end="")
             if key == "name":
                 print("{}".format(json_[key]))
     except ValueError:
