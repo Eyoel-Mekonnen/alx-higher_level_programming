@@ -11,7 +11,7 @@ if __name__ == '__main__':
     q = {'q': variable}
     response = requests.post("http://0.0.0.0:5000/search_user", data=q)
     json_ = response.json()
-    if json == {}:
+    if json_ == {}:
         print("No result")
     try:
         for key, value in json_.items():
