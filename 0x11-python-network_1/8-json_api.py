@@ -10,8 +10,8 @@ if __name__ == '__main__':
         q = ""
     data = {'q': q}
     response = requests.post("http://0.0.0.0:5000/search_user", data=data)
-    json_ = response.json()
     try:
+        json_ = response.json()
         if json_ == {}:
             print("No result")
         for key, value in json_.items():
