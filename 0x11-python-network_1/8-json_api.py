@@ -7,17 +7,17 @@ if __name__ == '__main__':
     if (len(sys.argv) == 2):
         variable = sys.argv[1]
     else:
-        varialbe = ""
+        variable = ""
     q = {'q': variable}
     response = requests.post("http://0.0.0.0:5000/search_user", data=q)
-    json = response.json()
+    json_ = response.json()
     if json == {}:
         print("No result")
     try:
-        for key, value in json.items():
+        for key, value in json_.items():
             if key == "id":
-                print("[{}] ".format(json[key], end=""))
+                print("[{}] ".format(json_[key], end=""))
             if key == "name":
-                print("{}".format(json[key]))
+                print(value)
     except ValueError:
         print("Not a valid JSON")
