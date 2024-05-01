@@ -18,6 +18,6 @@ if __name__ == '__main__':
             if key == "id":
                 print("[{}] ".format(json_[key], end=""))
             if key == "name":
-                print(value)
+                print("{}".format(json_[key]))
     except ValueError:
         print("Not a valid JSON")
