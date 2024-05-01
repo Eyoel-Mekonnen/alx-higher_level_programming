@@ -1,4 +1,4 @@
-#!/bin/usr/python3
+#!/usr/bin/python3
 """Script that takes parameter and checks json."""
 import requests
 import sys
